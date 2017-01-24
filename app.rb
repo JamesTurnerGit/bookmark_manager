@@ -5,6 +5,10 @@ require_relative './app/models/link.rb'
 
 class Bookmark_manager < Sinatra::Base
 
+  get '/' do
+    redirect '/links'
+  end
+
   get '/links' do
     @links = Link.all
     erb(:links)
