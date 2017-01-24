@@ -9,7 +9,6 @@ feature "adding links to database" do
 
     within 'ul#links' do
       expect(page).to have_content('thingie')
-
     end
   end
 end
