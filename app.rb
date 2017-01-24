@@ -1,8 +1,7 @@
 ENV['RACK_ENV'] ||= 'development'
 
 require 'sinatra/base'
-require_relative './app/models/tag.rb'
-require_relative './app/models/link.rb'
+require_relative './app/datamapper_setup.rb'
 
 class Bookmark_manager < Sinatra::Base
 
@@ -12,7 +11,6 @@ class Bookmark_manager < Sinatra::Base
 
   get '/links' do
     @links = Link.all
-    p @links[0].tags[0].name
     erb(:links)
   end
 
@@ -25,8 +23,6 @@ class Bookmark_manager < Sinatra::Base
                 title: params[:title])
   tag  = Tag.first_or_create(name: params[:tags])  # 2. Create a tag for the link
   link.tags << tag                       # 3. Adding the tag to the link's DataMapper collection.
-
-
   link.save
   redirect to('/links')
 end
