@@ -1,4 +1,3 @@
-require 'spec_helper'
 
 feature 'list of links' do
   scenario 'user would like to view a list of links' do
