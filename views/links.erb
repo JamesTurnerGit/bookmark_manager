@@ -1,7 +1,7 @@
 <h1>bookmarks </h1>
 <ul id=links>
   <% @links.each do |link| %>
-    <%= link.title %> - <%= link.url %> - <%= link.tags %> <br>
+    <%= link.title %> - <%= link.url %> - <%= link.tags[0].name %> <br>
   <% end %>
 </ul>
 <a href='/links/new'>Add link</a>
