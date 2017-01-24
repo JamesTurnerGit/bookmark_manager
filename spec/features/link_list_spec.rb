@@ -8,5 +8,6 @@ feature 'list of links' do
     #within 'ul#links' do
       expect(page).to have_content('BBC')
     #end
+
   end
 end

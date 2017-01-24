@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.4.0'
+ruby '2.2.3'
 
 gem 'rspec'
 gem 'capybara'
@@ -9,3 +9,4 @@ gem 'dm-postgres-adapter'
 gem 'rspec-sinatra'
 gem 'sinatra', '2.0.0.beta2'
 gem 'rake'
+gem 'database_cleaner'
